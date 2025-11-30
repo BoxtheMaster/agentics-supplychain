@@ -37,7 +37,7 @@ Inputs:
 
 What we do:
 
-- Build a large directed graph `G_FULL` where nodes are firm-level entities and
+- Build a directed graph `G_FULL` where nodes are firm-level entities and
   edges represent **supply-chain** and **competitor** relationships.
 - Enrich each node with metadata (`conm`, `gvkey`, `FACTSET_ENTITY_ID`,
   `naics_sector`, `loc`, etc.).
@@ -226,5 +226,6 @@ python -m venv .venv
 source .venv/bin/activate      # Mac/Linux
 # or .venv\Scripts\activate    # Windows
 ```
+
 
 
