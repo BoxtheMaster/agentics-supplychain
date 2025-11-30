@@ -160,8 +160,8 @@ Outputs/full_graph.graphml + sector GraphMLs       news_output/news_shocks.csv
                              │
                              ▼
                       streamlit_final.py
-          (Graph builder, news processor, shock overlay)
-
+          (Graph builder, news processor, shock overlay)g
+```
 ---
 
 
@@ -225,6 +225,6 @@ cd /path/to/Agentics/SupplyChain
 python -m venv .venv
 source .venv/bin/activate      # Mac/Linux
 # or .venv\Scripts\activate    # Windows
-
+```
 
 
