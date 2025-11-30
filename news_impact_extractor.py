@@ -16,8 +16,8 @@ from news_impact_models import NewsImpactRecord
 # ================================
 # HARD-WIRED DEFAULT PATHS / MODEL
 # ================================
-DEFAULT_JSON_PATH = "/Users/boxuanli/Desktop/2008/200801_sample.json"
-DEFAULT_OUT_CSV = "/Users/boxuanli/Code/Agentics/SupplyChain/news_output/news_shocks.csv"
+DEFAULT_JSON_PATH = "/2008/200801.json"
+DEFAULT_OUT_CSV = "/SupplyChain/news_output/news_shocks.csv"
 DEFAULT_OPENAI_MODEL = "gpt-4.1-mini"
 
 # Number of “failed / trivial” states to debug (re-run LLM, log raw output)
