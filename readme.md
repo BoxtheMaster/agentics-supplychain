@@ -138,7 +138,32 @@ These are then usable for:
 - Visualizing shocked networks in Gephi / Cytoscape.
 - Downstream econometric or ML models (e.g., shock propagation, stress tests).
 
+At a high level:
+
+```text
+FactSet SCR TXT/CSV    Firm Master (FactSet → gvkey)     Reuters JSON
+        │                         │                          │
+        │                         └─────────────┐            │
+        │                                       │            │
+        ▼                                       ▼            ▼
+factset_supply_chain_core.py          factset_entityid_to_gvkey...   news_impact_extractor.py
+        │                                       │            │
+        │                                       └────────────┘
+        ▼
+Outputs/full_graph.graphml + sector GraphMLs       news_output/news_shocks.csv
+        │                                                       │
+        │                                                       │
+        └──────────►  apply_news_shocks_to_graph.py  ◄──────────┘
+                             │
+                             ▼
+      sector_with_shocks.graphml + sector_with_shocks_nodes.csv
+                             │
+                             ▼
+                      streamlit_final.py
+          (Graph builder, news processor, shock overlay)
+
 ---
+
 
 ## 2. Repository Layout (key files)
 
@@ -202,28 +227,4 @@ source .venv/bin/activate      # Mac/Linux
 # or .venv\Scripts\activate    # Windows
 
 
-## 🏗 Architecture Overview
 
-At a high level:
-
-```text
-FactSet SCR TXT/CSV    Firm Master (FactSet → gvkey)     Reuters JSON
-        │                         │                          │
-        │                         └─────────────┐            │
-        │                                       │            │
-        ▼                                       ▼            ▼
-factset_supply_chain_core.py          factset_entityid_to_gvkey...   news_impact_extractor.py
-        │                                       │            │
-        │                                       └────────────┘
-        ▼
-Outputs/full_graph.graphml + sector GraphMLs       news_output/news_shocks.csv
-        │                                                       │
-        │                                                       │
-        └──────────►  apply_news_shocks_to_graph.py  ◄──────────┘
-                             │
-                             ▼
-      sector_with_shocks.graphml + sector_with_shocks_nodes.csv
-                             │
-                             ▼
-                      streamlit_final.py
-          (Graph builder, news processor, shock overlay)
