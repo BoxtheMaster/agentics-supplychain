@@ -1,0 +1,42 @@
+__pycache__/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+*.pyc
+*.py[cod]
+.DS_Store
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+.envrc
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# JetBrains
+.idea/
+sandbox/
+/coverage.xml
+/.coverage
+
+
+# Agentics
+agentics.code-workspace
+# Test reports
+report.html
+
+# IDE
+.vscode
+
+# local folders
+__*__/
+_[a-z]*.py
+invoke.json
+invoke.y*ml
