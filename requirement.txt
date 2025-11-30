@@ -1,0 +1,38 @@
+streamlit==1.40.0
+pandas==2.2.2
+numpy==1.26.4
+matplotlib==3.8.4
+plotly==5.22.0
+networkx==3.2.1
+pyvis==0.3.2
+scipy==1.12.0
+
+# Data + JSON processing
+python-dateutil==2.9.0
+ujson==5.10.0
+orjson==3.10.0
+
+# Geospatial / maps
+pydeck==0.9.1
+shapely==2.0.4
+geopandas==1.0.1
+fiona==1.9.6
+
+# ML / embeddings / clustering (used in shock grouping)
+scikit-learn==1.4.2
+sentence-transformers==2.6.1
+torch==2.2.2
+transformers==4.41.1
+
+# Agentics-style pipeline
+pydantic==2.7.1
+fastapi==0.110.1
+httpx==0.27.0
+
+# File formats
+pyarrow==16.1.0
+openpyxl==3.1.2
+
+# Utils
+tqdm==4.66.4
+requests==2.32.3
